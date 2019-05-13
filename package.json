@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "start": "browser-sync --start server --files ."
+    "start": "node dev-server"
   },
   "dependencies": {
     "todomvc-app-css": "^2.2.0"

@@ -4,6 +4,7 @@
     "start": "node dev-server"
   },
   "dependencies": {
+    "angular": "^1.7.8",
     "todomvc-app-css": "^2.2.0"
   },
   "devDependencies": {

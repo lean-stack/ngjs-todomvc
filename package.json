@@ -1,6 +1,12 @@
 {
   "private": true,
+  "scripts": {
+    "start": "browser-sync --start server --files ."
+  },
   "dependencies": {
     "todomvc-app-css": "^2.2.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.5"
   }
 }

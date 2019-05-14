@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="../node_modules/todomvc-app-css/index.css">
 </head>
 
-<body>
-  <section class="todoapp">
+<body ng-app="todos.app">
+  <section class="todoapp" ng-controller="MainController">
     <header class="header">
       <h1>todos</h1>
       <input class="new-todo" placeholder="What needs to be done?" autofocus>
@@ -66,7 +66,13 @@
     <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
   </footer>
   <script src="../node_modules/angular/angular.js"></script>
-  <script src="./main.js"></script>
+
+  <!-- Todos App Scripts -->
+  <script src="app/app.module.js"></script>
+  <script src="app/controllers/main.controller.js"></script>
+
+  <!-- Runtime Configuration -->
+  <script src="main.js"></script>
 </body>
 
 </html>

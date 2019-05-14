@@ -52,6 +52,9 @@
       $scope.todos.splice(todoIx, 1);
     };
 
+    $scope.removeCompletedTodos = function () {};
+    $scope.syncAllStates = function() {};
+
     $scope.beginEdit = function () {};
     $scope.cancelEdit = function () {};
     $scope.commitEdit = function () {};

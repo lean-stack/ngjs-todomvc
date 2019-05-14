@@ -34,7 +34,7 @@
     </section>
     <footer ng-show="hasTodos()" class="footer">
       <!-- This should be `0 items left` by default -->
-      <span class="todo-count"><strong>{{ activeCount() }}</strong> item left</span>
+      <span class="todo-count"><strong>{{ activeCount() }}</strong> {{ 'item' | pluralize:activeCount() }} left</span>
       <ul ng-if="routingImplemented" class="filters">
         <li>
           <a class="selected" href="#/">All</a>
@@ -59,6 +59,7 @@
   <!-- Todos App Scripts -->
   <script src="app/app.module.js"></script>
   <script src="app/controllers/main.controller.js"></script>
+  <script src="app/filters/pluralize.filter.js"></script>
 
   <!-- Runtime Configuration -->
   <script src="main.js"></script>

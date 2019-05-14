@@ -52,8 +52,15 @@
       $scope.todos.splice(todoIx, 1);
     };
 
-    $scope.removeCompletedTodos = function () {};
-    $scope.syncAllStates = function() {};
+    $scope.removeCompletedTodos = function () {
+      // Reminder: ref change!
+      $scope.todos = $scope.todos.filter( function (t) { return !t.completed; });
+    };
+
+    $scope.syncAllStates = function() {
+      var newState = $scope.hasActiveItems();
+      $scope.todos.forEach( function (elt) { elt.completed = newState; });
+    };
 
     $scope.beginEdit = function () {};
     $scope.cancelEdit = function () {};

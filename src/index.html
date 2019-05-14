@@ -17,7 +17,7 @@
       </form>
     </header>
     <section class="main" ng-show="hasTodos()">
-      <input ng-checked="!hasActiveItems()" id="toggle-all" class="toggle-all" type="checkbox">
+      <input ng-checked="!hasActiveItems()" ng-click="syncAllStates()" id="toggle-all" class="toggle-all" type="checkbox">
       <label for="toggle-all">Mark all as complete</label>
       <ul class="todo-list">
         <li ng-repeat="t in todos track by t.id"
@@ -46,7 +46,7 @@
           <a href="#/completed">Completed</a>
         </li>
       </ul>
-      <button ng-show="hasCompletedItems()" class="clear-completed">Clear completed</button>
+      <button ng-show="hasCompletedItems()" ng-click="removeCompletedTodos()" class="clear-completed">Clear completed</button>
     </footer>
   </section>
   <footer class="info">
